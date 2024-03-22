@@ -1,7 +1,10 @@
 nric = input('Enter an NRIC number: ')
-valid = True
-v = True
+
+
 # Type your code below
+v = True
+valid = True
+
 if len(nric) == 9:
   v = True
 else:
@@ -11,10 +14,7 @@ if v is True:
   nric = nric.lstrip(' ')
   a = nric[0]
   b = nric[8]
-  no_raw = list(nric[1:8])
-  no = []
-  for number in no_raw:
-      no.append(int(number))
+  no = list(nric[1:8])
 
   table_1 = [2, 7, 6, 5, 4, 3, 2]
   table_2 = [
@@ -27,7 +27,7 @@ if v is True:
 
       sum_1 = []
       for i in range(0, len(no)):
-          sum_1.append(no[i] * table_1[i])
+          sum_1.append(int(no[i]) * table_1[i])
       sum = int(sum(sum_1))
 
       if a == 'T' or a == 'G':
